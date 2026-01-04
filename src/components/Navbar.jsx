@@ -1,35 +1,41 @@
 export default function Navbar() {
-    return (
-      <header style={{
-        position:"sticky", top:0, zIndex:50,
-        background:"rgba(255,255,255,0.9)",
-        backdropFilter:"blur(10px)",
-        borderBottom:"1px solid var(--border)"
-      }}>
-        <div className="container" style={{
-          display:"flex", alignItems:"center", justifyContent:"space-between",
-          padding:"14px 0"
-        }}>
-          <a href="#top" style={{fontWeight:800, letterSpacing:"-0.02em"}}>
-            Sunny Kasuvojula
+  return (
+    <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
+      <div className="mx-auto flex w-[min(1100px,92%)] items-center justify-between py-4">
+        <a href="#top" className="font-extrabold tracking-tight">
+          Sunny Kasuvojula
+        </a>
+
+        <nav className="flex flex-wrap items-center gap-3">
+          {["projects","skills","experience","about","contact"].map(item => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="rounded-full border bg-slate-50 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-100"
+            >
+              {item.charAt(0).toUpperCase()+item.slice(1)}
+            </a>
+          ))}
+
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+          >
+            GitHub
           </a>
-  
-          <nav style={{display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", justifyContent:"flex-end"}}>
-            <a href="#projects" className="pill">Projects</a>
-            <a href="#skills" className="pill">Skills</a>
-            <a href="#experience" className="pill">Experience</a>
-            <a href="#about" className="pill">About</a>
-            <a href="#contact" className="pill">Contact</a>
-  
-            <a className="btn btnGhost" href="https://github.com/yourusername" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a className="btn btnPrimary" href="/Sunny_Kasuvojula_Resume.pdf" target="_blank" rel="noreferrer">
-              Resume
-            </a>
-          </nav>
-        </div>
-      </header>
-    );
-  }
-  
+
+          <a
+            href="/Sunny_Kasuvojula_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}

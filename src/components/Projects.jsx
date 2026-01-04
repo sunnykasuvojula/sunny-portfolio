@@ -2,42 +2,80 @@ import { projects } from "../data/projects";
 
 function ProjectCard({ p }) {
   return (
-    <div className="card" style={{padding:"18px"}}>
-      <div style={{display:"flex", justifyContent:"space-between", gap:10, alignItems:"flex-start"}}>
+    <article className="rounded-2xl border bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg">
+      <div className="flex items-start justify-between gap-3">
         <div>
-          <h3 style={{margin:"0 0 6px"}}>{p.title}</h3>
-          <p style={{margin:"0 0 10px", color:"var(--muted)", lineHeight:1.6}}>{p.tagline}</p>
+          <h3 className="mb-1 text-lg font-semibold">{p.title}</h3>
+          <p className="text-sm leading-relaxed text-slate-600">{p.tagline}</p>
         </div>
-        <span className="pill">Featured</span>
+
+        {p.featured && (
+          <span className="rounded-full border bg-slate-50 px-3 py-1 text-xs text-slate-600">
+            Featured
+          </span>
+        )}
       </div>
 
-      <ul style={{margin:"10px 0 12px", paddingLeft:18, color:"var(--text)", lineHeight:1.7}}>
-        {p.highlights.map((h)=> <li key={h}>{h}</li>)}
-      </ul>
+      {!!p.highlights?.length && (
+        <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-slate-900">
+          {p.highlights.map((h, idx) => (
+            <li key={`${p.title}-h-${idx}`}>{h}</li>
+          ))}
+        </ul>
+      )}
 
-      <div style={{display:"flex", gap:8, flexWrap:"wrap", marginBottom:12}}>
-        {p.tech.map((t)=> <span key={t} className="pill">{t}</span>)}
-      </div>
+      {!!p.tech?.length && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {p.tech.map((t) => (
+            <span
+              key={`${p.title}-t-${t}`}
+              className="rounded-full border bg-slate-50 px-3 py-1 text-xs text-slate-600"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      )}
 
-      <div style={{display:"flex", gap:10, flexWrap:"wrap"}}>
-        <a className="btn btnPrimary" href={p.demo} target="_blank" rel="noreferrer">Live Demo</a>
-        <a className="btn btnGhost" href={p.github} target="_blank" rel="noreferrer">GitHub</a>
+      <div className="mt-6 flex flex-wrap gap-3">
+        {p.demo && (
+          <a
+            className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            href={p.demo}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live Demo
+          </a>
+        )}
+        {p.github && (
+          <a
+            className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2"
+            href={p.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        )}
       </div>
-    </div>
+    </article>
   );
 }
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
-      <div className="container">
-        <h2 className="sectionTitle">Featured Projects</h2>
-        <p className="sectionSubtitle">
+    <section id="projects" className="py-24">
+      <div className="mx-auto w-[min(1100px,92%)]">
+        <h2 className="mb-3 text-2xl font-bold text-center">Featured Projects</h2>
+        <p className="mb-10 max-w-7xl text-slate-600">
           Projects that demonstrate end-to-end development: UI, APIs, authentication, and deployment.
         </p>
 
-        <div className="grid grid3">
-          {projects.map((p) => <ProjectCard key={p.title} p={p} />)}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <ProjectCard key={p.title} p={p} />
+          ))}
         </div>
       </div>
     </section>

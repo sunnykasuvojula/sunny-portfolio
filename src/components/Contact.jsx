@@ -1,65 +1,114 @@
 export default function Contact() {
-    return (
-      <section id="contact" className="section">
-        <div className="container">
-          <h2 className="sectionTitle">Contact</h2>
-          <p className="sectionSubtitle">
-            The fastest way to reach me is email. I reply quickly.
-          </p>
-  
-          <div className="grid grid2">
-            <div className="card" style={{padding:"18px"}}>
-              <h3 style={{margin:"0 0 10px"}}>Let’s talk</h3>
-              <p style={{margin:"0 0 14px", color:"var(--muted)", lineHeight:1.7}}>
-                If you’re hiring a junior full-stack JS developer, I’d love to connect.
-              </p>
-  
-              <div style={{display:"flex", gap:10, flexWrap:"wrap"}}>
-                <a className="btn btnPrimary" href="mailto:sunny.kasuvojula@gmail.com">Email Me</a>
-                <a className="btn btnGhost" href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a className="btn btnGhost" href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-  
-              <hr className="hr" />
-  
-              <div style={{display:"grid", gap:8, color:"var(--muted)"}}>
-                <div><strong style={{color:"var(--text)"}}>Email:</strong> sunny.kasuvojula@gmail.com</div>
-                <div><strong style={{color:"var(--text)"}}>Location:</strong> Toronto, ON (Remote/Canada)</div>
-              </div>
+  return (
+    <section id="contact" className="py-24">
+      <div className="mx-auto w-[min(1100px,92%)]">
+        <h2 className="mb-3 text-2xl font-bold">Contact</h2>
+        <p className="mb-10 max-w-2xl text-slate-600">
+          The fastest way to reach me is email. I reply quickly.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Left card */}
+          <div className="rounded-2xl border bg-white p-6">
+            <h3 className="mb-2 text-lg font-semibold">Let’s talk</h3>
+            <p className="mb-4 text-slate-600 leading-relaxed">
+              If you’re hiring a junior full-stack JS developer, I’d love to connect.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <a
+                className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700"
+                href="mailto:sunny.kasuvojula@gmail.com"
+              >
+                Email Me
+              </a>
+              <a
+                className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50"
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50"
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
             </div>
-  
-            <div className="card" style={{padding:"18px"}}>
-              <h3 style={{margin:"0 0 10px"}}>Quick message</h3>
-              <form onSubmit={(e)=>{e.preventDefault(); alert("Connect this to EmailJS/Formspree if you want.");}}>
-                <label style={{display:"block", marginBottom:6, fontWeight:600}}>Name</label>
-                <input style={inputStyle} placeholder="Your name" />
-  
-                <label style={{display:"block", margin:"12px 0 6px", fontWeight:600}}>Email</label>
-                <input style={inputStyle} placeholder="your@email.com" />
-  
-                <label style={{display:"block", margin:"12px 0 6px", fontWeight:600}}>Message</label>
-                <textarea style={{...inputStyle, minHeight:110}} placeholder="Type your message..." />
-  
-                <button className="btn btnPrimary" style={{marginTop:12, width:"100%"}}>
-                  Send Message
-                </button>
-                <p style={{margin:"10px 0 0", color:"var(--muted)", fontSize:12}}>
-                  (Optional) Connect to EmailJS or Formspree later.
-                </p>
-              </form>
+
+            <div className="my-5 h-px w-full bg-slate-200" />
+
+            <div className="grid gap-2 text-sm text-slate-600">
+              <div>
+                <span className="font-semibold text-slate-900">Email:</span>{" "}
+                sunny.kasuvojula@gmail.com
+              </div>
+              <div>
+                <span className="font-semibold text-slate-900">Location:</span>{" "}
+                Toronto, ON (Remote/Canada)
+              </div>
             </div>
           </div>
+
+          {/* Right card */}
+          <div className="rounded-2xl border bg-white p-6">
+            <h3 className="mb-3 text-lg font-semibold">Quick message</h3>
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Connect this to EmailJS/Formspree if you want.");
+              }}
+              className="space-y-4"
+            >
+              <div>
+                <label className="mb-1 block text-sm font-semibold text-slate-900">
+                  Name
+                </label>
+                <input
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-semibold text-slate-900">
+                  Email
+                </label>
+                <input
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-semibold text-slate-900">
+                  Message
+                </label>
+                <textarea
+                  className="min-h-[120px] w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                  placeholder="Type your message..."
+                />
+              </div>
+
+              <button
+                className="w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700"
+                type="submit"
+              >
+                Send Message
+              </button>
+
+              <p className="text-xs text-slate-500">
+                (Optional) Connect this to EmailJS or Formspree later.
+              </p>
+            </form>
+          </div>
         </div>
-      </section>
-    );
-  }
-  
-  const inputStyle = {
-    width:"100%",
-    padding:"12px 12px",
-    borderRadius:12,
-    border:"1px solid var(--border)",
-    outline:"none",
-    fontSize:14
-  };
-  
+      </div>
+    </section>
+  );
+}
