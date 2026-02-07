@@ -9,8 +9,8 @@ export const projects = [
       "File uploads and notifications"
     ],
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    demo: "#",
-    github: "#"
+    demo: "https://opspilot-775n.vercel.app",
+    github: "https://github.com/sunnykasuvojula/opspilot.git"
   },
   {
     title: "HealthEase",
@@ -22,8 +22,8 @@ export const projects = [
       "Stripe integration for payments"
     ],
     tech: ["React", "Node.js", "GraphQL", "MongoDB", "JWT", "Stripe"],
-    demo: "#",
-    github: "#"
+    demo: "https://opspilot-775n.vercel.app",
+    github: "https://github.com/sunnykasuvojula/health-ease"
   },
   {
     title: "Drive Test Booking App",
@@ -35,7 +35,7 @@ export const projects = [
       "MVC architecture with Express"
     ],
     tech: ["Node.js", "Express", "MongoDB", "EJS", "JWT"],
-    demo: "#",
-    github: "#"
+    demo: "https://opspilot-775n.vercel.app",
+    github: "https://github.com/sunnykasuvojula/Drive_test_App"
   }
 ];
