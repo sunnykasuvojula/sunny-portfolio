@@ -51,7 +51,7 @@ function ProjectCard({ p }) {
         {p.github && (
           <a
             className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2"
-            href={p.github}
+            href="https://github.com/sunnykasuvojula/opspilot.git"
             target="_blank"
             rel="noreferrer"
           >
