@@ -18,13 +18,13 @@ export default function Contact() {
             <div className="flex flex-wrap gap-3">
               <a
                 className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700"
-                href="mailto:sunny.kasuvojula@gmail.com"
+                href="mailto:sunnykrishank12@gmail.com"
               >
                 Email Me
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50"
-                href="https://linkedin.com/in/yourusername"
+                href="www.linkedin.com/in/sunny-krishna-kasuvojula-b12563342"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -32,7 +32,7 @@ export default function Contact() {
               </a>
               <a
                 className="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-50"
-                href="https://github.com/yourusername"
+                href="https://github.com/sunnykasuvojula"
                 target="_blank"
                 rel="noreferrer"
               >

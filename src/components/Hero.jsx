@@ -54,7 +54,7 @@ export default function Hero() {
           {/* Icon buttons (with real links) */}
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sunnykasuvojula"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -64,7 +64,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="www.linkedin.com/in/sunny-krishna-kasuvojula-b12563342"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
