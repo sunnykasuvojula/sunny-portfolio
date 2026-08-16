@@ -18,7 +18,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/sunnykasuvojula"
             target="_blank"
             rel="noreferrer"
             className="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-slate-50"
@@ -27,7 +27,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="/Sunny_Kasuvojula_Resume.pdf"
+            href="../public/Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"

@@ -74,7 +74,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Sunny_Kasuvojula_Resume.pdf"
+              href="../public/Resume.pdf"
               target="_blank"
               rel="noreferrer"
               aria-label="Download Resume"
