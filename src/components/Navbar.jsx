@@ -27,7 +27,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="../public/Resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"

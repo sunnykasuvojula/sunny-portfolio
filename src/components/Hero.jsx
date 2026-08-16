@@ -74,7 +74,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="../public/Resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"
               aria-label="Download Resume"
